@@ -1,7 +1,7 @@
 import { observer } from "mobx-react-lite";
 import classes from "./Autocomplete.module.scss";
 import AutocompleteViewModel from "../../store/autocomplete.store";
-import { UiSearch } from "../../components/countrySearch/UiSearch";
+import { UiSearch } from "../../components";
 
 const viewModel1 = new AutocompleteViewModel();
 const viewModel2 = new AutocompleteViewModel();
