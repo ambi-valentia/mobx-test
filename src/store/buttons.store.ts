@@ -1,10 +1,15 @@
-import { makeAutoObservable } from "mobx";
+import { action, makeAutoObservable, makeObservable, observable } from "mobx";
 
-class ButtonsStore {
+class ButtonsViewModel {
     inputValue: string = '';
 
     constructor() {
-        makeAutoObservable(this);
+        makeObservable( this,
+          {
+            inputValue: observable,
+            setInput: action,
+          }
+        );
     }
 
     setInput = (value: string) => {
@@ -29,4 +34,4 @@ class ButtonsStore {
       };
 }
 
-export default ButtonsStore;
+export default ButtonsViewModel;

@@ -21,7 +21,7 @@
 
 .button {
   height: 50px;
-  width: 200px;
+  min-width: 200px;
 
   border-radius: 30px;
 
@@ -40,8 +40,5 @@
 }
 
 .componentContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-items: center;
+  width: 50%;
 }

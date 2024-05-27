@@ -5,7 +5,6 @@ import { Buttons } from "./pages/buttons/Buttons";
 
 function App() {
   const [mode, setMode] = useState<boolean>(true);
-
   return (
     <div className={classes.mainContainer}>
       <div className={classes.content}>

@@ -15,7 +15,6 @@ export function getCountryByName(countryName: string): Promise<CountryInfo[]> {
     }
 
     const searchText = countryName.toLocaleLowerCase();
-
     return countries.filter(
       (x) =>
         x.name.toLocaleLowerCase().startsWith(searchText) ||
