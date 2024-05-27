@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import classes from './App.module.scss';
+import classes from "./App.module.scss";
 import { Autocomplete } from "./pages/autocomplete/Autocomplete";
 import { Buttons } from "./pages/buttons/Buttons";
 
@@ -8,12 +8,14 @@ function App() {
 
   return (
     <div className={classes.mainContainer}>
-      <button
-        onClick={() => setMode(!mode)}
-      >
-        Click me!
-      </button>
-      {mode === true ? <Autocomplete /> : <Buttons />}
+      <div className={classes.content}>
+        <button onClick={() => setMode(!mode)} className={classes.button}>
+          Click me!
+        </button>
+        <div className={classes.componentContainer}>
+          {mode === true ? <Autocomplete /> : <Buttons />}
+        </div>
+      </div>
     </div>
   );
 }
